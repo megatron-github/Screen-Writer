@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Screen Writer</title>
+		<script src="libraries/p5.js"></script>
+		<!-- <script src="libraries/p5.sound.js"></script> -->
+		<script src="Clock/colon.js"></script>
+		<script src="Clock/digit.js"></script>
+		<script src="Clock/clock.js"></script>
+		<script src="Writing/message.js"></script>
+		<script src="vehicle.js"></script>
+		<script src="sketch.js"></script>
+		<style>
+			* {
+				/* box-sizing: border-box; */
+				margin: 0;
+				padding: 0;
+			}
+			canvas {
+				margin: 0;
+				padding: 0;
+			}
+			.ui {
+				display: flex;
+      			justify-content: center;
+				background-color: black;
+    		}
+			.container input {
+      			font-family: 'Classique-Saigon';
+      			flex: 1 0 1;
+				flex-basis: 50%;
+				padding: 5px;
+				color: black;
+				font-size: 24px;
+				border: none;
+				border-bottom: 2px solid rgba(255, 170, 238, 1);
+				border-radius: 5px;
+				text-align: center;
+				transition: 0.5s;
+				background-color: black;
+			}
+			.container input:focus {
+      			outline: none;
+      			border-bottom: 4px solid rgba(255, 170, 238, 1);
+    		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- <canvas id="c" width="960" height="490"></canvas> -->
+			<div class="ui">
+			  <input id="input_text" maxlength="20">
+			</div>
+		  </div>
+	</body>
+</html>
