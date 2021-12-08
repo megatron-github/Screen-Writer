@@ -11,7 +11,7 @@ function preload() {
 	font = loadFont('miscellaneous/Classique-Saigon.ttf')
 }
 
-function autoFeature() {
+function HomeScreen() {
 	let sec = second();
 	if (sec != prev) {
 		prev = sec;
@@ -35,7 +35,11 @@ function windowResized() {
 }
 
 function mouseReleased() {
-	mouseTouched = !mouseTouched;
+	if (mouseY < 0) {
+		mouseTouched = true;
+	} else {
+		mouseTouched = !mouseTouched;
+	}
 	timer = 0;
 }
 
@@ -59,11 +63,7 @@ function setup() {
 function draw() {
 	// put drawing code here
 	background(0);
-	// strokeWeight(1);
-	// stroke(255);
-	// line(0, H/2, W, H/2);
-	// line(W/2, 0, W/2, H);
-	autoFeature();
+	HomeScreen();
 	msg = getMessage();
 
 	if (mouseTouched && keyTouched) {
